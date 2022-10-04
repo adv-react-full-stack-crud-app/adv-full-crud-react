@@ -1,0 +1,39 @@
+.Header {
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    padding-right: var(--padding);
+    height: var(--white-color);
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+    align-items: center;
+    background-color: rgb(128, 234, 197);
+}
+
+h1 {
+    color: #809BCE;
+    cursor: pointer;
+}
+
+h1:hover {
+    color: #95B8D1;
+}
+
+.Header a {
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+.Header a:hover {
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: rgb(99, 194, 161) 0px 7px 29px 0px;
+
+}

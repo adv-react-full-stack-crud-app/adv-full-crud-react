@@ -1,0 +1,8 @@
+.About {
+    background-color: rgba(87, 230, 214, 0.598);
+    height: calc(100vh - var(--header-height));
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
