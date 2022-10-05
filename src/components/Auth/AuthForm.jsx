@@ -13,8 +13,7 @@ export default function AuthForm() {
     await signUpUser(data);
   };
   return (
-    <form className={styles.AuthForm} onSubmit={(e) => handleSubmit(e) }
-      method="post">
+    <form className={styles.AuthForm} onSubmit={(e) => handleSubmit(e) }>
       <h1>Sign Up</h1>
       <InputControl 
         label="First Name"
