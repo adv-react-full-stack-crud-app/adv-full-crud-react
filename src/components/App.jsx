@@ -5,14 +5,24 @@ import {
   Routes } from 'react-router-dom';
 import Auth from './Auth/Auth';
 import AuthForm from './Auth/AuthForm';
-import Layout from './Page/Layout';
+// import Layout from './Page/Layout';
 
 
 export default function App() {
   return (
     <Router>
       <Routes>
-        <Route element={<Layout/>} >
+        <Route path="/" element={<Auth/>}>
+          <Route index element={<AuthForm mode="signin"/>}/>
+          <Route path="signup" element={<AuthForm mode="signup"/>}/>
+        </Route>
+      </Routes>
+    </Router>
+  );
+}
+//small change
+
+{/* <Route element={<Layout/>} >
           <Route index path="/"/>
           <Route path="auth" element={<Auth/>}/>
           <Route path="authform" element={<AuthForm mode="signin"/>}>
@@ -21,9 +31,4 @@ export default function App() {
               element={<AuthForm mode="signup"/>}
             />
           </Route>
-        </Route>
-      </Routes>
-    </Router>
-  );
-}
-//small change
+        </Route> */}
