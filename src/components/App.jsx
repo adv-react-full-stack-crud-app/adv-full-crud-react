@@ -20,15 +20,4 @@ export default function App() {
     </Router>
   );
 }
-//small change
 
-{/* <Route element={<Layout/>} >
-          <Route index path="/"/>
-          <Route path="auth" element={<Auth/>}/>
-          <Route path="authform" element={<AuthForm mode="signin"/>}>
-            <Route
-              path="signup"
-              element={<AuthForm mode="signup"/>}
-            />
-          </Route>
-        </Route> */}

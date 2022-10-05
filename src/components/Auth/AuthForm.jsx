@@ -22,7 +22,7 @@ export default function AuthForm({ mode = 'signin' }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await signUpUser(data);
+    await type.action(data);
   };
 
   const signin = {
