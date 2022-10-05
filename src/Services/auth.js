@@ -7,3 +7,9 @@ export async function signUpUser(credentials) {
   res.user = res.data;
   return res;
 }
+
+export async function signInUser(credentials) {
+  const res = await post('http://localhost:7890/api/v1/sessions', credentials);
+  res.user = res.data;
+  return res;
+}
