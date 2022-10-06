@@ -9,12 +9,10 @@ export default function Header() {
   return (
     <>
       <header className={styles.Header}>
-        <h1>My Portfolio</h1>
         <div>
           <Navigation/>
         </div>
       </header>
-      {/* <Outlet/> */}
     </>
   );
 }
