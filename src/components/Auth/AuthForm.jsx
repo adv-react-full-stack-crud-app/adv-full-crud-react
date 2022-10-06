@@ -17,12 +17,12 @@ export default function AuthForm({ mode = 'signin' }) {
 
   const signIn = async (credentials) => {
     await signInUser(credentials);
-    window.location.replace('/lists');
   };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     await type.action(data);
+    window.location.replace('/lists');
   };
 
   const signin = {
