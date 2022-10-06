@@ -8,7 +8,7 @@ export default function UserProvider({ children }) {
 
   const verify = async () => {
     const res = await verifyUser();
-    setUser(res.user || null);
+    return res.status != 401 ? setUser(res.user) : null;
   };
 
   useEffect(() => {
