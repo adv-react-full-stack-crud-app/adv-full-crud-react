@@ -7,7 +7,6 @@ import styles from './AuthForm.css';
 
 export default function AuthForm({ mode = 'signin' }) {
 
-
   const [data, handleChange] = useForm();
   
 
@@ -18,6 +17,7 @@ export default function AuthForm({ mode = 'signin' }) {
 
   const signIn = async (credentials) => {
     await signInUser(credentials);
+    window.location.replace('/lists');
   };
 
   const handleSubmit = async (e) => {
