@@ -8,14 +8,17 @@ export default function ListProvider({ children }) {
   const [lists, setLists] = useState(null);
   const [error, setError] = useState(null);
 
+  const addList = (item) => {
+    setLists((items) => [...items, item]);
+  };
+
   const stateAndSetters = {
     lists,
     setLists,
     error,
     setError,
+    addList,
   };
-
-  // changa
 
   return (
     <ListsContext.Provider value={stateAndSetters}>
