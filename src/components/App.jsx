@@ -8,7 +8,6 @@ import Auth from './Auth/Auth';
 import AuthForm from './Auth/AuthForm';
 import ProtectedRoute from './Auth/ProtectedRoute';
 import Lists from './Lists/Lists';
-// import Layout from './Page/Layout';
 
 
 export default function App() {
