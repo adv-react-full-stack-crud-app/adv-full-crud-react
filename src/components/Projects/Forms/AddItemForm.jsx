@@ -14,6 +14,7 @@ export default function AddItemForm({ onAdd }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await onAdd(value);
+    setValue('');
   };
 
   return (
