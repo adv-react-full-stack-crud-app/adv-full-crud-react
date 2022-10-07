@@ -1,21 +1,22 @@
 import { get, post } from './request';
-const BASE_URL = 'http://localhost:7890/api/v1';
-// const URL = '/api/v1/users';
+// const BASE_URL = 'http://localhost:7890/api/v1';
+const BASE_URL = '/api/v1/users';
 
 export async function signUpUser(credentials) {
-  const res = await post(`${BASE_URL}/users`, credentials);
+  const res = await post(`${BASE_URL}`, credentials);
   res.user = res.data;
   return res;
 }
 
 export async function signInUser(credentials) {
-  const res = await post(`${BASE_URL}/users/sessions`, credentials);
+  const res = await post(`${BASE_URL}/sessions`, credentials);
   res.user = res.data;
   return res;
 }
 
 export async function verifyUser() {
-  const res = await get(`${BASE_URL}/users/me`);
+  const res = await get(`${BASE_URL}/me`);
+  console.log(res);
   res.user = res.data;
   return res;
 }

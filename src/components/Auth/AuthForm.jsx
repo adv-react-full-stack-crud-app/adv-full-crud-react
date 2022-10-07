@@ -12,7 +12,6 @@ export default function AuthForm({ mode = 'signin' }) {
 
   const signUp = async (credentials) => {
     await signUpUser(credentials);
-    // handleResponse(response);
   };
 
   const signIn = async (credentials) => {
