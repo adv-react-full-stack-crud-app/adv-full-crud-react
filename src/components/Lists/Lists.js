@@ -3,7 +3,6 @@ import AddItemForm from '../Projects/Forms/AddItemForm';
 
 export default function Lists() {
   const { lists, addItem } = useList();
-  console.log('lists', lists);
   if (!lists) return null;
 
   const handleAdd = async (description) => {

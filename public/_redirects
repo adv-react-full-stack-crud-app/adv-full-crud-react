@@ -1,2 +1,3 @@
-/api/*  https://auth-back-end-users.herokuapp.com/api/:splat  200
+/api/*  https://adv-react-backend-taketwo.herokuapp.com/
+/api/:splat  200
 /*  /index.html   200
