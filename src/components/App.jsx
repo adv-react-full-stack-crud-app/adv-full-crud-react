@@ -3,6 +3,7 @@ import {
   // Navigate, 
   Route, 
   Routes } from 'react-router-dom';
+import ListProvider from '../Context/ListContext';
 import UserProvider from '../Context/UserContext';
 import Auth from './Auth/Auth';
 import AuthForm from './Auth/AuthForm';
@@ -21,9 +22,10 @@ export default function App() {
           </Route>
 
           <Route element={<ProtectedRoute/>}>
-            <Route path="lists" element={<Lists/>}/>
+            <Route element={<ListProvider/>}>
+              <Route path="lists" element={<Lists/>}/>
+            </Route>
           </Route>
-
 
         </Routes>
       </UserProvider>

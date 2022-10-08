@@ -3,7 +3,7 @@ import { FormButton, InputControl } from './FormControl';
 
 
 
-export default function AddItemForm() {
+export default function AddItemForm({ onAdd }) {
 
   const [value, setValue] = useState('');
 
@@ -13,6 +13,8 @@ export default function AddItemForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    await onAdd(value);
+    setValue('');
   };
 
   return (
