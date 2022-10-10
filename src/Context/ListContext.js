@@ -1,7 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { getList } from '../Services/list';
-// import { createList } from '../Services/list';
 
 export const ListsContext = createContext();
 

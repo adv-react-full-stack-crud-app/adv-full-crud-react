@@ -5,8 +5,7 @@ import AddItemForm from '../Projects/Forms/AddItemForm';
 
 export default function Lists() {
   const { fetchList } = useContext(ListsContext);
-  const { lists, addItem, deleteItem } = useList();
-  console.log('lists', lists);
+  const { lists, addItem, deleteItem, updateItem } = useList();
   if (!lists) return null;
 
   const handleAdd = async (description) => {
@@ -15,6 +14,10 @@ export default function Lists() {
 
   const handleDelete = async (id) => {
     await deleteItem(id);
+    await fetchList();
+  };
+  const handleUpdate = async (id) => {
+    await updateItem(id);
     await fetchList();
   };
 
@@ -28,9 +31,12 @@ export default function Lists() {
         {lists &&
           lists.map((list, i) => (
             <li key={list.id + i}>
-              {console.log('list.id', list.id)}
               {list.description}
               <button onClick={() => handleDelete(list.id)}>Delete</button>
+              <label>
+                Mark as complete
+                <input type="checkbox" onChange={handleUpdate} />
+              </label>
             </li>
           ))}
       </ul>

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { ListsContext } from '../../Context/ListContext';
-import { createList, deleteById } from '../../Services/list';
+import { createList, deleteById, updateById } from '../../Services/list';
 
 export default function useList() {
   const { lists, setLists, error, setError } = useContext(ListsContext);
@@ -19,5 +19,9 @@ export default function useList() {
     await deleteById(id);
   };
 
-  return { lists, error, addItem, deleteItem };
+  const updateItem = async (id, body) => {
+    await updateById(id, body);
+  };
+
+  return { lists, error, addItem, deleteItem, updateItem };
 }
