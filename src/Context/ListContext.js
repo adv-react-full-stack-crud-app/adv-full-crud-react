@@ -34,6 +34,7 @@ export default function ListProvider({ children }) {
     error,
     setError,
     addList,
+    fetchList,
   };
 
   return (
