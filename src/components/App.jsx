@@ -27,7 +27,6 @@ export default function App() {
             </Route>
           </Route>
 
-
         </Routes>
       </UserProvider>
     </Router>
