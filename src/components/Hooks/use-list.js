@@ -19,8 +19,8 @@ export default function useList() {
     await deleteById(id);
   };
 
-  const updateItem = async (id, body) => {
-    await updateById(id, body);
+  const updateItem = async (id) => {
+    await updateById(id, { completed: true });
   };
 
   return { lists, error, addItem, deleteItem, updateItem };

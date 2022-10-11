@@ -35,7 +35,7 @@ export default function Lists() {
               <button onClick={() => handleDelete(list.id)}>Delete</button>
               <label>
                 Mark as complete
-                <input type="checkbox" onChange={handleUpdate} />
+                <input type="checkbox" onChange={() => handleUpdate(list.id)} />
               </label>
             </li>
           ))}
